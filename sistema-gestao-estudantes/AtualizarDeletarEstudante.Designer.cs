@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.ID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxNOME = new System.Windows.Forms.TextBox();
             this.NOME = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxSOBRENOME = new System.Windows.Forms.TextBox();
             this.SOBRENOME = new System.Windows.Forms.Label();
             this.Feminino = new System.Windows.Forms.RadioButton();
             this.Masculino = new System.Windows.Forms.RadioButton();
@@ -41,17 +41,17 @@
             this.Gênero = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Telefone = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxTel = new System.Windows.Forms.TextBox();
+            this.pictureBoxFOTO = new System.Windows.Forms.PictureBox();
             this.Endereço = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.textBoxEND = new System.Windows.Forms.TextBox();
+            this.buttonEnviarFoto = new System.Windows.Forms.Button();
+            this.buttonConfirmar = new System.Windows.Forms.Button();
+            this.buttonRemover = new System.Windows.Forms.Button();
+            this.buttonProcurar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFOTO)).BeginInit();
             this.SuspendLayout();
             // 
             // ID
@@ -64,19 +64,19 @@
             this.ID.TabIndex = 0;
             this.ID.Text = "ID";
             // 
-            // textBox1
+            // textBoxID
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxID.Location = new System.Drawing.Point(132, 32);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxID.TabIndex = 1;
             // 
-            // textBox2
+            // textBoxNOME
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxNOME.Location = new System.Drawing.Point(132, 76);
+            this.textBoxNOME.Name = "textBoxNOME";
+            this.textBoxNOME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNOME.TabIndex = 4;
             // 
             // NOME
             // 
@@ -88,12 +88,12 @@
             this.NOME.TabIndex = 3;
             this.NOME.Text = "NOME";
             // 
-            // textBox3
+            // textBoxSOBRENOME
             // 
-            this.textBox3.Location = new System.Drawing.Point(151, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.textBoxSOBRENOME.Location = new System.Drawing.Point(151, 124);
+            this.textBoxSOBRENOME.Name = "textBoxSOBRENOME";
+            this.textBoxSOBRENOME.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSOBRENOME.TabIndex = 6;
             // 
             // SOBRENOME
             // 
@@ -175,20 +175,20 @@
             this.Telefone.TabIndex = 14;
             this.Telefone.Text = "Telefone";
             // 
-            // textBox4
+            // textBoxTel
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 330);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 15;
+            this.textBoxTel.Location = new System.Drawing.Point(132, 330);
+            this.textBoxTel.Name = "textBoxTel";
+            this.textBoxTel.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTel.TabIndex = 15;
             // 
-            // pictureBox1
+            // pictureBoxFOTO
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(631, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxFOTO.Location = new System.Drawing.Point(631, 45);
+            this.pictureBoxFOTO.Name = "pictureBoxFOTO";
+            this.pictureBoxFOTO.Size = new System.Drawing.Size(100, 50);
+            this.pictureBoxFOTO.TabIndex = 16;
+            this.pictureBoxFOTO.TabStop = false;
             // 
             // Endereço
             // 
@@ -200,49 +200,50 @@
             this.Endereço.TabIndex = 17;
             this.Endereço.Text = "Endereço";
             // 
-            // textBox5
+            // textBoxEND
             // 
-            this.textBox5.Location = new System.Drawing.Point(133, 373);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 18;
+            this.textBoxEND.Location = new System.Drawing.Point(133, 373);
+            this.textBoxEND.Multiline = true;
+            this.textBoxEND.Name = "textBoxEND";
+            this.textBoxEND.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEND.TabIndex = 18;
             // 
-            // button2
+            // buttonEnviarFoto
             // 
-            this.button2.Location = new System.Drawing.Point(643, 126);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Enviar Foto";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonEnviarFoto.Location = new System.Drawing.Point(643, 126);
+            this.buttonEnviarFoto.Name = "buttonEnviarFoto";
+            this.buttonEnviarFoto.Size = new System.Drawing.Size(75, 23);
+            this.buttonEnviarFoto.TabIndex = 19;
+            this.buttonEnviarFoto.Text = "Enviar Foto";
+            this.buttonEnviarFoto.UseVisualStyleBackColor = true;
+            this.buttonEnviarFoto.Click += new System.EventHandler(this.buttonEnviarFoto_Click);
             // 
-            // button1
+            // buttonConfirmar
             // 
-            this.button1.Location = new System.Drawing.Point(349, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Confirmar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonConfirmar.Location = new System.Drawing.Point(349, 365);
+            this.buttonConfirmar.Name = "buttonConfirmar";
+            this.buttonConfirmar.Size = new System.Drawing.Size(75, 23);
+            this.buttonConfirmar.TabIndex = 23;
+            this.buttonConfirmar.Text = "Confirmar";
+            this.buttonConfirmar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonRemover
             // 
-            this.button3.Location = new System.Drawing.Point(445, 365);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Remover";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonRemover.Location = new System.Drawing.Point(445, 365);
+            this.buttonRemover.Name = "buttonRemover";
+            this.buttonRemover.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemover.TabIndex = 24;
+            this.buttonRemover.Text = "Remover";
+            this.buttonRemover.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonProcurar
             // 
-            this.button4.Location = new System.Drawing.Point(329, 33);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Procurar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonProcurar.Location = new System.Drawing.Point(329, 33);
+            this.buttonProcurar.Name = "buttonProcurar";
+            this.buttonProcurar.Size = new System.Drawing.Size(75, 23);
+            this.buttonProcurar.TabIndex = 25;
+            this.buttonProcurar.Text = "Procurar";
+            this.buttonProcurar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -260,30 +261,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.buttonProcurar);
+            this.Controls.Add(this.buttonRemover);
+            this.Controls.Add(this.buttonConfirmar);
+            this.Controls.Add(this.buttonEnviarFoto);
+            this.Controls.Add(this.textBoxEND);
             this.Controls.Add(this.Endereço);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.pictureBoxFOTO);
+            this.Controls.Add(this.textBoxTel);
             this.Controls.Add(this.Telefone);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Gênero);
             this.Controls.Add(this.Nascimento);
             this.Controls.Add(this.Data);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxSOBRENOME);
             this.Controls.Add(this.SOBRENOME);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxNOME);
             this.Controls.Add(this.NOME);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.ID);
             this.Name = "AtualizarDeletarEstudante";
             this.Text = "AtualizarDeletarEstudante";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFOTO)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,10 +293,10 @@
         #endregion
 
         private System.Windows.Forms.Label ID;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.TextBox textBoxNOME;
         private System.Windows.Forms.Label NOME;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxSOBRENOME;
         private System.Windows.Forms.Label SOBRENOME;
         private System.Windows.Forms.RadioButton Feminino;
         private System.Windows.Forms.RadioButton Masculino;
@@ -304,14 +305,14 @@
         private System.Windows.Forms.Label Gênero;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Telefone;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxTel;
+        private System.Windows.Forms.PictureBox pictureBoxFOTO;
         private System.Windows.Forms.Label Endereço;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBoxEND;
+        private System.Windows.Forms.Button buttonEnviarFoto;
+        private System.Windows.Forms.Button buttonConfirmar;
+        private System.Windows.Forms.Button buttonRemover;
+        private System.Windows.Forms.Button buttonProcurar;
         private System.Windows.Forms.Label label1;
     }
 }

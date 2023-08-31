@@ -42,12 +42,12 @@ namespace sistema_gestao_estudantes
             }
         }
 
-        public bool atualizarEstudante(string nome, string sobrenome,
+        public bool atualizarEstudante(int id, string nome, string sobrenome,
            DateTime nascimento, string telefone, string genero,
            string endereco, MemoryStream foto)
         {
             MySqlCommand comando = new MySqlCommand("UPDATE `estudantes` SET `nome`= @nm,`sobrenome`= @sbn,`nascimento`= @nsc,`genero`= @gen,`telefone`= @tel,`endereco`= @end,`foto`= @ft WHERE `id` = @id", bancoDeDados.getConexao);
-
+            comando.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             comando.Parameters.Add("@nm", MySqlDbType.VarChar).Value = nome;
             comando.Parameters.Add("@sbn", MySqlDbType.VarChar).Value = sobrenome;
             comando.Parameters.Add("@nsc", MySqlDbType.Date).Value = nascimento;
@@ -55,9 +55,25 @@ namespace sistema_gestao_estudantes
             comando.Parameters.Add("@tel", MySqlDbType.VarChar).Value = telefone;
             comando.Parameters.Add("@end", MySqlDbType.VarChar).Value = endereco;
             comando.Parameters.Add("@ft", MySqlDbType.LongBlob).Value = foto.ToArray();
+            bancoDeDados.abrirConexao();
+            if (comando.ExecuteNonQuery() == 1)
+            {
+                bancoDeDados.fecharConexao();
+                return true;
+            }
+            else
+            {
+                bancoDeDados.fecharConexao();
+                return false;
+            }
+        }
+
+        public bool deletarEstudante (int id)
+        {
+            MySqlCommand("DELETE FROM 'estudantes' WHERE 'id' = @studentid");
+            comando.Parameters.Add ("@studentid", MySqlDbType.Int32).Value = id;
 
             bancoDeDados.abrirConexao();
-
             if (comando.ExecuteNonQuery() == 1)
             {
                 bancoDeDados.fecharConexao();

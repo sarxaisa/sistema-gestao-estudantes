@@ -241,7 +241,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(453, 686);
+            this.ClientSize = new System.Drawing.Size(433, 686);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEnviarFoto);
@@ -261,6 +261,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormInserirEstudante";
             this.Text = "FormInserirEstudante";
+            this.Load += new System.EventHandler(this.FormInserirEstudante_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();

@@ -106,5 +106,10 @@ namespace sistema_gestao_estudantes
                 return true;
             }
         }
+
+        private void FormInserirEstudante_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
