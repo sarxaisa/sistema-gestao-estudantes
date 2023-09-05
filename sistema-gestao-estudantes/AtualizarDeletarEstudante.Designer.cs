@@ -34,9 +34,9 @@
             this.NOME = new System.Windows.Forms.Label();
             this.textBoxSOBRENOME = new System.Windows.Forms.TextBox();
             this.SOBRENOME = new System.Windows.Forms.Label();
-            this.Feminino = new System.Windows.Forms.RadioButton();
-            this.Masculino = new System.Windows.Forms.RadioButton();
-            this.Data = new System.Windows.Forms.DateTimePicker();
+            this.raddioButtonFeminino = new System.Windows.Forms.RadioButton();
+            this.raddioButtonMasculino = new System.Windows.Forms.RadioButton();
+            this.dateTimePickerNascimento = new System.Windows.Forms.DateTimePicker();
             this.Nascimento = new System.Windows.Forms.Label();
             this.Gênero = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -105,34 +105,36 @@
             this.SOBRENOME.TabIndex = 5;
             this.SOBRENOME.Text = "SOBRENOME";
             // 
-            // Feminino
+            // raddioButtonFeminino
             // 
-            this.Feminino.AutoSize = true;
-            this.Feminino.Checked = true;
-            this.Feminino.Location = new System.Drawing.Point(15, 37);
-            this.Feminino.Name = "Feminino";
-            this.Feminino.Size = new System.Drawing.Size(67, 17);
-            this.Feminino.TabIndex = 7;
-            this.Feminino.TabStop = true;
-            this.Feminino.Text = "Feminino";
-            this.Feminino.UseVisualStyleBackColor = true;
+            this.raddioButtonFeminino.AutoSize = true;
+            this.raddioButtonFeminino.Checked = true;
+            this.raddioButtonFeminino.Location = new System.Drawing.Point(15, 37);
+            this.raddioButtonFeminino.Name = "raddioButtonFeminino";
+            this.raddioButtonFeminino.Size = new System.Drawing.Size(67, 17);
+            this.raddioButtonFeminino.TabIndex = 7;
+            this.raddioButtonFeminino.TabStop = true;
+            this.raddioButtonFeminino.Text = "Feminino";
+            this.raddioButtonFeminino.UseVisualStyleBackColor = true;
             // 
-            // Masculino
+            // raddioButtonMasculino
             // 
-            this.Masculino.AutoSize = true;
-            this.Masculino.Location = new System.Drawing.Point(88, 37);
-            this.Masculino.Name = "Masculino";
-            this.Masculino.Size = new System.Drawing.Size(73, 17);
-            this.Masculino.TabIndex = 8;
-            this.Masculino.Text = "Masculino";
-            this.Masculino.UseVisualStyleBackColor = true;
+            this.raddioButtonMasculino.AutoSize = true;
+            this.raddioButtonMasculino.Location = new System.Drawing.Point(88, 37);
+            this.raddioButtonMasculino.Name = "raddioButtonMasculino";
+            this.raddioButtonMasculino.Size = new System.Drawing.Size(73, 17);
+            this.raddioButtonMasculino.TabIndex = 8;
+            this.raddioButtonMasculino.Text = "Masculino";
+            this.raddioButtonMasculino.UseVisualStyleBackColor = true;
             // 
-            // Data
+            // dateTimePickerNascimento
             // 
-            this.Data.Location = new System.Drawing.Point(151, 163);
-            this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(200, 20);
-            this.Data.TabIndex = 9;
+            this.dateTimePickerNascimento.CustomFormat = "dd/mm/yyyy";
+            this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNascimento.Location = new System.Drawing.Point(151, 163);
+            this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
+            this.dateTimePickerNascimento.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerNascimento.TabIndex = 9;
             // 
             // Nascimento
             // 
@@ -156,8 +158,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Feminino);
-            this.groupBox1.Controls.Add(this.Masculino);
+            this.groupBox1.Controls.Add(this.raddioButtonFeminino);
+            this.groupBox1.Controls.Add(this.raddioButtonMasculino);
             this.groupBox1.Location = new System.Drawing.Point(151, 218);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -226,6 +228,7 @@
             this.buttonConfirmar.TabIndex = 23;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
+            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
             // 
             // buttonRemover
             // 
@@ -273,7 +276,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Gênero);
             this.Controls.Add(this.Nascimento);
-            this.Controls.Add(this.Data);
+            this.Controls.Add(this.dateTimePickerNascimento);
             this.Controls.Add(this.textBoxSOBRENOME);
             this.Controls.Add(this.SOBRENOME);
             this.Controls.Add(this.textBoxNOME);
@@ -281,7 +284,7 @@
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.ID);
             this.Name = "AtualizarDeletarEstudante";
-            this.Text = "AtualizarDeletarEstudante";
+            this.Text = "SGA- Editar Estudante";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFOTO)).EndInit();
@@ -293,26 +296,26 @@
         #endregion
 
         private System.Windows.Forms.Label ID;
-        private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.TextBox textBoxNOME;
         private System.Windows.Forms.Label NOME;
-        private System.Windows.Forms.TextBox textBoxSOBRENOME;
         private System.Windows.Forms.Label SOBRENOME;
-        private System.Windows.Forms.RadioButton Feminino;
-        private System.Windows.Forms.RadioButton Masculino;
-        private System.Windows.Forms.DateTimePicker Data;
         private System.Windows.Forms.Label Nascimento;
         private System.Windows.Forms.Label Gênero;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Telefone;
-        private System.Windows.Forms.TextBox textBoxTel;
-        private System.Windows.Forms.PictureBox pictureBoxFOTO;
         private System.Windows.Forms.Label Endereço;
-        private System.Windows.Forms.TextBox textBoxEND;
         private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.Button buttonRemover;
         private System.Windows.Forms.Button buttonProcurar;
         private System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.TextBox textBoxID;
+        internal System.Windows.Forms.TextBox textBoxNOME;
+        internal System.Windows.Forms.TextBox textBoxSOBRENOME;
+        internal System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
+        internal System.Windows.Forms.GroupBox groupBox1;
+        internal System.Windows.Forms.TextBox textBoxTel;
+        internal System.Windows.Forms.PictureBox pictureBoxFOTO;
+        internal System.Windows.Forms.TextBox textBoxEND;
+        internal System.Windows.Forms.RadioButton raddioButtonFeminino;
+        internal System.Windows.Forms.RadioButton raddioButtonMasculino;
     }
 }
