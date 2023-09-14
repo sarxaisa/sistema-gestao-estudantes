@@ -238,6 +238,7 @@
             this.buttonRemover.TabIndex = 24;
             this.buttonRemover.Text = "Remover";
             this.buttonRemover.UseVisualStyleBackColor = true;
+            this.buttonRemover.Click += new System.EventHandler(this.buttonRemover_Click);
             // 
             // buttonProcurar
             // 
@@ -247,6 +248,7 @@
             this.buttonProcurar.TabIndex = 25;
             this.buttonProcurar.Text = "Procurar";
             this.buttonProcurar.UseVisualStyleBackColor = true;
+            this.buttonProcurar.Click += new System.EventHandler(this.buttonProcurar_Click);
             // 
             // label1
             // 
